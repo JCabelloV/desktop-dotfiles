@@ -1,0 +1,56 @@
+{
+    "clock": {
+        "format": " {:%H:%M | %e %B} ",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {capacity}%",
+        "format-warning": "<span size='13000' foreground='#b1e3ad'>{icon} </span> {capacity}%",
+        "format-critical": "<span size='13000' foreground='#f38ba8'>{icon} </span> {capacity}%",
+        "format-charging": "<span size='13000' foreground='#b1e3ad'>{icon} </span> {capacity}%",
+        "format-plugged": "<span size='13000' foreground='#b1e3ad'>{icon} </span> {capacity}%",
+        "format-alt": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {time}",
+        "format-full": "<span size='13000' foreground='#b1e3ad'> </span>{capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{time}"
+    },
+    "network": {
+        "format-wifi": "<span size='13000' foreground='#f5e0dc'> </span>{essid}",
+        "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰈁</span> connected",
+        "format-linked": "{ifname} (no ip)",
+        "format-disconnected": "<span size='13000' foreground='#f5e0dc'>睊 </span>disconnected",
+        "tooltip-format-wifi": "signal strength: {signalStrength}%"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "ﱝ",
+        "format-icons": [" ", " ", "  "],
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": " apagar\n reiniciar\n cambiar de usuario",
+        "on-click": "bash -c '~/.config/waybar/scripts/power-menu.sh'"
+    },
+    "hyprland/window": {
+    "format": "👉 {}",
+    "rewrite": {
+        "(.*) — Mozilla Firefox": "🌎 $1",
+        "(.*) - fish": "> [$1]"
+    },
+    "separate-outputs": true
+}
+//    "custom/timer": {
+//        "format": "{}",
+//        "exec": "~/.config/waybar/scripts/timer.sh",
+//        "interval": 1,
+//        "on-click": "bash -c '~/.config/waybar/scripts/timer.sh set'"
+ //   }
+}
+}
